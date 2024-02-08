@@ -1,0 +1,18 @@
+main {
+ flex: 1;
+ height: auto;
+ overflow-y: auto;
+ font-family: 'Poppins', sans-serif;
+ height: 100vh;
+ background-color: rgba(7, 6, 6, 0.1);
+}
+.close-btn{
+ outline: 5px solid rgb(255, 255, 255) !important;
+ border-radius: 2px;
+ background: white !important;
+ border: none;
+ padding: 5px 0px 5px 0px;
+ opacity: 0.8;
+ 
+}
+
