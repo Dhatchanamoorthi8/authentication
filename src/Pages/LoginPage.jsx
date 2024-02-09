@@ -42,10 +42,6 @@ function LoginPage({ setAuth }) {
   }
 
 
-  const togglePasswordVisibility = (e) => {
-    e.preventDefault()
-    setshowpass(!showpass)
-  }
 
   return (
     <>
@@ -63,7 +59,7 @@ function LoginPage({ setAuth }) {
               </div>
             </div>
           </div>
-          <form className="form border rounded shadow p-3 col-12 col-lg-6 col-md-6 col-sm-6  row row-cols-2 position-relative " style={{ opacity: loader ? "0.1" : "1" }} onSubmit={handleLogin}>
+          <form className="form border rounded shadow p-3 col-12 col-lg-6 col-md-6 col-sm-6  row row-cols-2 position-relative " style={{ opacity: loader ? "0.1" : "1" }}>
             <div className="col-lg-6 img-div">
               <img src={require("../img/groups.png")} alt="body-building" className='login-side-img d-sm-none d-lg-flex d-xl-flex' />
             </div>
@@ -98,15 +94,11 @@ function LoginPage({ setAuth }) {
                     Enter Password
                   </label>
                 </div>
-                <div className="showpass-btn">
-                  <button onClick={togglePasswordVisibility} className='showpass'>
-                    {showpass ? <FaRegEye style={{ fontSize: "20px", zIndex: "500" }} /> : <FaRegEyeSlash style={{ fontSize: "20px", zIndex: "500" }} />}
-                  </button>
-                </div>
               </div>
               <button
                 type="button"
-                className="btn btn-success bg-green-800 col-12 mt-5">
+                className="btn btn-success bg-green-800 col-12 mt-5" 
+                onClick={handleLogin}>
                 Login
               </button>
             </div>
